@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tektur:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1f1c2c;
+    font-family: "Michroma", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.navbar {
+    margin: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+li {
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    color: #928dab;
+}
+
+li:hover {
+    transform: scaleX(1.2);
+    color: #b8b2d6;
+
+}
+
+.container {
+    width: 100%;
+    height: 30vw;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box {
+    width: 95%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: 20px;
+}
+
+.image-box img {
+    border: 2px solid #b8b2d6;
+    border-radius: 50px;
+    margin: 0 5px;
+    width: 4%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease-in-out 0.5s;
+}
+.image-box img.zoom {
+    transform: scale(1.1);
+    z-index: 2;
+}
+.image-box img.active {
+    width: 100%;
+}
+.image-box img:hover {
+    width: 100%;
+}
+
+.prenext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #1f1c2c;
+    margin: 20px;
+}
+
+.scrollbtn {
+    font-family: "Michroma", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    padding: 6px 20px;
+    border: none;
+    font-size: 12px;
+    border-radius: 50px;
+    background-color: #928dab;
+    cursor: pointer;
+    transform: scale(1);
+}
+.scrollbtn:hover{
+    background-color:#b9b3d8 ;
+   transform: scale(1.1);
+}
+@media (max-width:500px){
+.navbar ul{
+    gap: 25px;
+    padding: 5px;
+}
+.prenext{
+    gap: 10px;
+}
+.scrollbtn{
+    padding: 3px 10px;
+    font-size: 10px;
+}
+}
